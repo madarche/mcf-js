@@ -2,7 +2,11 @@ Modular Crypt Format
 ====================
 
 This modules reads (deserialize) and writes (serialize) password fields in
-databases following the Modular Crypt Format.
+databases following the Modular Crypt Format (MCF).
+
+The modular crypt format (MCF) is a standard for encoding password hash strings
+in order to defend a database against attacks (dictionary attacks, pre-computed
+rainbow table attacks, etc.).
 
 The Modular Crypt Format is described in detail in
 http://pythonhosted.org/passlib/modular_crypt_format.html
@@ -10,7 +14,7 @@ http://pythonhosted.org/passlib/modular_crypt_format.html
 Format
 ------
 
-The Modular Crypt Format is of the following form:
+A password field in the Modular Crypt Format is of the following form:
 
     $identifier$cost$salt$derived_key
 
@@ -30,6 +34,30 @@ deserialize(mcf_field)
 
 ```js
 serialize(identifier, cost, salt, derived_key)
+```
+
+Usage
+-----
+
+Reading from the database:
+
+```js
+var mcf = require('mcf');
+
+var mcf_field = user.get('password);
+var obj = mcf.deserialize(mcf_field);
+var identifier = obj.identifier;
+var cost = obj.cost;
+var salt = obj.salt;
+var derived_key = obj.derived_key;
+```
+
+Writing to the database:
+
+```js
+var mcf = require('mcf');
+
+var mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key);
 ```
 
 Contributions
