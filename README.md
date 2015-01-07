@@ -1,26 +1,36 @@
 Modular Crypt Format
 ====================
 
+This modules reads (deserialize) and writes (serialize) password fields in
+databases following the Modular Crypt Format.
+
+The Modular Crypt Format is described in detail in
+http://pythonhosted.org/passlib/modular_crypt_format.html
+
 Format
 ------
 
-Check the doc here: http://pythonhosted.org/passlib/modular_crypt_format.html
+The Modular Crypt Format is of the following form:
+
+    $identifier$cost$salt$derived_key
+
+Install
+-------
+
+```bash
+npm install mcf
+```
 
 API
 ---
 
-    deserialize
+```js
+deserialize(mcf_field)
+```
 
-    return {
-        identifier: identifier,
-        cost: cost,
-        salt: salt,
-        derived_key: derived_key
-    };
-
-    cost is a Number
-
-    serialize
+```js
+serialize(identifier, cost, salt, derived_key)
+```
 
 Contributions
 -------------
