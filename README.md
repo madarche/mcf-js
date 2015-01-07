@@ -46,17 +46,17 @@ var mcf = require('mcf');
 
 var mcf_field = user.get('password');
 try {
-var obj = mcf.deserialize(mcf_field);
-var identifier = obj.identifier;
-var cost = obj.cost;
-var salt = obj.salt;
-var derived_key = obj.derived_key;
+    var obj = mcf.deserialize(mcf_field);
+    var identifier = obj.identifier;
+    var cost = obj.cost;
+    var salt = obj.salt;
+    var derived_key = obj.derived_key;
 } catch(err) {
-if (err instanceof mcf.McfError) {
-    console.log("Format error in the database", err);
-  } else {
-    console.log("Unexpected fail");
-  }
+    if (err instanceof mcf.McfError) {
+        console.log("Format error in the database", err);
+    } else {
+        console.log("Unexpected fail");
+    }
 }
 ```
 
