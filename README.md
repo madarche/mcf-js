@@ -39,7 +39,7 @@ serialize(identifier, cost, salt, derived_key)
 Usage
 -----
 
-Reading from the database:
+Reading the format from the database:
 
 ```js
 var mcf = require('mcf');
@@ -60,7 +60,7 @@ try {
 }
 ```
 
-Writing to the database:
+Creating the format to write in the database:
 
 ```js
 var mcf = require('mcf');
