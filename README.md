@@ -44,7 +44,7 @@ Reading from the database:
 ```js
 var mcf = require('mcf');
 
-var mcf_field = user.get('password);
+var mcf_field = user.get('password');
 var obj = mcf.deserialize(mcf_field);
 var identifier = obj.identifier;
 var cost = obj.cost;
