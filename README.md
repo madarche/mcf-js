@@ -78,5 +78,5 @@ the [Node aesthetic].
 
 [Node aesthetic]: http://substack.net/node_aesthetic
 
-[npm-image]: https://img.shields.io/npm/v/js-mcf.svg?style=flat
+[npm-image]: https://img.shields.io/badge/npm-v.1.0.1-red.svg
 [npm-url]: https://www.npmjs.com/package/mcf
