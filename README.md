@@ -1,7 +1,8 @@
-[![NPM Version][npm-image]][npm-url]
+
 
 Modular Crypt Format
 ====================
+[![NPM Version][npm-image]][npm-url]
 
 This modules reads (deserialize) and writes (serialize) password fields in
 databases following the Modular Crypt Format (MCF).
