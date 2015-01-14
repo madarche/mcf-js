@@ -1,3 +1,5 @@
+[![NPM Version][npm-image]][npm-url]
+
 Modular Crypt Format
 ====================
 
@@ -75,3 +77,6 @@ Pull Requests and contributions in general are welcome as long as they follow
 the [Node aesthetic].
 
 [Node aesthetic]: http://substack.net/node_aesthetic
+
+[npm-image]: https://img.shields.io/npm/v/js-mcf.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/mcf
