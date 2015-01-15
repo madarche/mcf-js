@@ -1,5 +1,8 @@
+
+
 Modular Crypt Format
 ====================
+[![NPM Version][npm-image]][npm-url]
 
 This modules reads (deserialize) and writes (serialize) password fields in
 databases following the Modular Crypt Format (MCF).
@@ -75,3 +78,6 @@ Pull Requests and contributions in general are welcome as long as they follow
 the [Node aesthetic].
 
 [Node aesthetic]: http://substack.net/node_aesthetic
+
+[npm-image]: https://img.shields.io/badge/npm-v.1.0.1-red.svg
+[npm-url]: https://www.npmjs.com/package/mcf
