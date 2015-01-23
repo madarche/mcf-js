@@ -34,9 +34,10 @@
     "node": true
   },
     "scripts": {
-    "test": "jshint *.json *.js && mocha index.js --require blanket -R html-cov > coverage.html"
+    "test": "jshint *.json *.js && mocha",
+    "test-cov": "mocha index.js --require blanket -R html-cov > coverage.html "
   },
-  "config": {
+    "config": {
       "blanket": {
         "pattern": "index.js",
         "data-cover-never" : "node_modules"
