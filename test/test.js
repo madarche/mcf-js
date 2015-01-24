@@ -3,7 +3,7 @@ var mcf = require('../');
 var assert = require("assert");
 var mcf_field = "$pbkdf2$10000$salt$derived";
 var mcf_cost_null= "$pbkdf2$0$salt$derived";
-var mcf_cost_negative = "$pbkdf2$-10$salt$derived";
+var mcf_cost_error= "$-15pbkdf2$abc$salt$derived";
 
 
 
@@ -40,18 +40,28 @@ describe('mcf', function(){
 
   describe("#serialize cost is null",function(){
     it("deserialize(mcf_cost_null) should return an error", function(){
+
+       //iThrowError = mcf.deserialize(mcf_cost_null);
+       //assert.throws(mcf.deserialize(mcf_cost_null), Error, "Error thrown");
+        mcf.deserialize.bind(mcf_cost_null).must.throw();
+      
+      
+    });
+  });
+
+  describe("#serialize error regex",function(){
+    it("deserialize(mcf_cost_error) should return an error of regex", function(){
      
-      //mcf.deserialize(mcf_cost_null).bind(mcf).must.throw();
+       mcf.deserialize.bind(mcf_cost_error).must.throw();
+       
       
     });
 
   });
 
-
-
-
-
 });
+
+
 
 
 
