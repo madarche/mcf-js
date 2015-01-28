@@ -3,7 +3,7 @@ var mcf = require('../');
 var assert = require('assert');
 var mcf_field = '$pbkdf2$10000$salt$derived';
 var mcf_cost_null= '$pbkdf2$0$salt$derived';
-var mcf_cost_error= '$-15pbkdf2$abc$salt$derived';
+var mcf_cost_error= '$-15pbkdf2$0$salt$derived';
 
 describe('mcf', function(){
   describe('Module mcf_index', function(){
