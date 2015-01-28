@@ -25,23 +25,24 @@
     "create-error": "0.3.1"
   },
   "devDependencies": {
+    "blanket": "1.1.6",
     "jshint": "2.5.11",
-    "mocha": "2.1.0"
+    "mocha": "2.1.0",
+    "must": "0.12.0"
   },
   "jshintConfig": {
     "unused": "vars",
     "undef": true,
     "node": true
   },
-    "scripts": {
+  "scripts": {
     "test": "jshint *.json *.js && mocha",
     "test-cov": "mocha --require blanket -R html-cov > test/coverage.html "
   },
-    "config": {
-      "blanket": {
-        "pattern": "index.js",
-        "data-cover-never" : "node_modules"
-      }
+  "config": {
+    "blanket": {
+      "pattern": "index.js",
+      "data-cover-never": "node_modules"
+    }
   }
-
-} 
+}
