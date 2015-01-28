@@ -7,7 +7,7 @@ var mcf_cost_error= '$-15pbkdf2$0$salt$derived';
 
 describe('mcf', function(){
     describe('Module mcf_index', function(){
-	it("should have a serialize adn deserialize Method", function(){
+	it("should have a serialize and deserialize Method", function(){
 	    assert.equal(typeof mcf, 'object');
 	    assert.equal(typeof mcf.deserialize, 'function');
 	    assert.equal(typeof mcf.serialize, 'function');

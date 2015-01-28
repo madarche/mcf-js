@@ -3,3 +3,4 @@
 /node_modules
 /test/coverage.html
 npm-debug.log
+travis.log
