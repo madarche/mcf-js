@@ -35,7 +35,7 @@
   },
     "scripts": {
     "test": "jshint *.json *.js && mocha",
-    "test-cov": "mocha index.js --require blanket -R html-cov > coverage.html "
+    "test-cov": "mocha --require blanket -R html-cov > coverage.html "
   },
     "config": {
       "blanket": {
