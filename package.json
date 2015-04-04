@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/madarche/js-mcf.git"
+    "url": "https://github.com/madarche/mcf-js.git"
   },
   "keywords": [
     "modular",
@@ -18,9 +18,9 @@
   "author": "Marc-Aurèle DARCHE <ma.darche@cynode.org> (https://github.com/madarche)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madarche/js-mcf/issues"
+    "url": "https://github.com/madarche/mcf-js/issues"
   },
-  "homepage": "https://github.com/madarche/js-mcf",
+  "homepage": "https://github.com/madarche/mcf-js",
   "dependencies": {
     "create-error": "0.3.1"
   },
