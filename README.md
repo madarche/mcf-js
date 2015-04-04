@@ -4,7 +4,16 @@ Modular Crypt Format
 ====================
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
 
+[npm-image]: https://img.shields.io/npm/v/mcf.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/mcf
+
+[travis-image]: https://img.shields.io/travis/madarche/mcf-js.svg?style=flat
+[travis-url]: https://travis-ci.org/madarche/mcf-js
+
+[coveralls-image]: https://img.shields.io/coveralls/madarche/mcf-js/master.svg
+[coveralls-url]: https://coveralls.io/r/madarche/mcf-js?branch=master
 
 This modules reads (deserialize) and writes (serialize) password fields in
 databases following the Modular Crypt Format (MCF).
@@ -80,9 +89,3 @@ Pull Requests and contributions in general are welcome as long as they follow
 the [Node aesthetic].
 
 [Node aesthetic]: http://substack.net/node_aesthetic
-
-[npm-image]: https://img.shields.io/npm/v/mcf.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/mcf
-
-[travis-image]: https://img.shields.io/travis/playanth955/js-mcf.svg?style=flat
-[travis-url]: https://travis-ci.org/playanth955/js-mcf
