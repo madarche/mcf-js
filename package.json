@@ -38,8 +38,9 @@
     "node": true
   },
   "scripts": {
-    "test": "jshint *.json *.js && mocha",
-    "test-cov": "mocha --require blanket -R html-cov > test/coverage.html "
+    "test": "jshint *.json *.js && mocha --check-leaks -R spec",
+    "test-coverage": "jshint *.json *.js && mocha --check-leaks --require blanket -R html-cov > test/coverage.html",
+    "test-travis": "jshint *.json *.js && mocha --check-leaks --require blanket -R mocha-lcov-reporter | coveralls"
   },
   "config": {
     "blanket": {
