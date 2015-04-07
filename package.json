@@ -25,7 +25,7 @@
     "create-error": "0.3.1"
   },
   "devDependencies": {
-    "blanket": "1.1.6",
+    "blanket": "git://github.com/alex-seville/blanket.git#790c863c47fe50ef4dd1a411e2e6bf36c8cc6263",
     "coveralls": "2.11.2",
     "jshint": "2.6.3",
     "mocha": "2.2.1",
@@ -37,15 +37,20 @@
     "undef": true,
     "node": true
   },
-  "scripts": {
-    "test": "jshint *.json *.js && mocha --check-leaks -R spec",
-    "test-coverage": "jshint *.json *.js && mocha --check-leaks --require blanket -R html-cov > test/coverage.html",
-    "test-travis": "jshint *.json *.js && mocha --check-leaks --require blanket -R mocha-lcov-reporter | coveralls"
-  },
   "config": {
     "blanket": {
-      "pattern": "index.js",
-      "data-cover-never": "node_modules"
+      "pattern": [
+        ""
+      ],
+      "data-cover-never": [
+        "node_modules"
+      ]
     }
+  },
+  "scripts": {
+    "test": "jshint *.json *.js && mocha --check-leaks -R spec",
+    "test-coverage": "jshint *.json *.js && mocha --require blanket -R html-cov > test/coverage.html",
+    "test-travis": "jshint *.json *.js && mocha --check-leaks --require blanket -R mocha-lcov-reporter | coveralls",
+    "clean": "rm -rf test/coverage.html"
   }
 }
