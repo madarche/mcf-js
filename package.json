@@ -1,6 +1,6 @@
 {
   "name": "mcf",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Modular Crypt Format",
   "main": "index.js",
   "repository": {
