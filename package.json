@@ -25,10 +25,10 @@
     "create-error": "0.3.1"
   },
   "devDependencies": {
-    "blanket": "git://github.com/alex-seville/blanket.git#790c863c47fe50ef4dd1a411e2e6bf36c8cc6263",
+    "blanket": "1.1.7",
     "coveralls": "2.11.2",
-    "jshint": "2.6.3",
-    "mocha": "2.2.3",
+    "jshint": "2.8.0",
+    "mocha": "2.2.5",
     "mocha-lcov-reporter": "0.0.2",
     "must": "0.12.0"
   },
