@@ -15,10 +15,10 @@ Modular Crypt Format
 [travis-url]: https://travis-ci.org/madarche/mcf-js
 
 [dependencies-image]: https://david-dm.org/madarche/mcf-js.svg
-[dependencies-url]: https://david-dm.org/mozilla/node-convict
+[dependencies-url]: https://david-dm.org/madarche/mcf-js
 
 [dev-dependencies-image]: https://david-dm.org/madarche/mcf-js/dev-status.svg
-[dev-dependencies-url]: https://david-dm.org/mozilla/node-convict#info=devDependencies
+[dev-dependencies-url]: https://david-dm.org/madarche/mcf-js#info=devDependencies
 
 [coveralls-image]: https://img.shields.io/coveralls/madarche/mcf-js/master.svg
 [coveralls-url]: https://coveralls.io/r/madarche/mcf-js?branch=master
