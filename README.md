@@ -1,8 +1,10 @@
 
-
 Modular Crypt Format
 ====================
+
 [![NPM Version][npm-image]][npm-url]
+[![Dependency Status][dependencies-image]][dependencies-url]
+[![devDependency Status][dev-dependencies-image]][dev-dependencies-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
@@ -11,6 +13,12 @@ Modular Crypt Format
 
 [travis-image]: https://img.shields.io/travis/madarche/mcf-js.svg?style=flat
 [travis-url]: https://travis-ci.org/madarche/mcf-js
+
+[dependencies-image]: https://david-dm.org/madarche/mcf-js.svg
+[dependencies-url]: https://david-dm.org/mozilla/node-convict
+
+[dev-dependencies-image]: https://david-dm.org/madarche/mcf-js/dev-status.svg
+[dev-dependencies-url]: https://david-dm.org/mozilla/node-convict#info=devDependencies
 
 [coveralls-image]: https://img.shields.io/coveralls/madarche/mcf-js/master.svg
 [coveralls-url]: https://coveralls.io/r/madarche/mcf-js?branch=master
