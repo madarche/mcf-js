@@ -1,6 +1,6 @@
 {
   "name": "mcf",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Modular Crypt Format",
   "engines": {
     "node": ">=4"
