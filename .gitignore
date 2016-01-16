@@ -1,5 +1,5 @@
 
 *~
 /node_modules
-/test/coverage.html
+/test/coverage
 npm-debug.log
