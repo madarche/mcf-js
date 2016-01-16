@@ -33,6 +33,7 @@ rainbow table attacks, etc.).
 The Modular Crypt Format is described in detail in
 http://pythonhosted.org/passlib/modular_crypt_format.html
 
+
 Format
 ------
 
@@ -40,12 +41,14 @@ A password field in the Modular Crypt Format is of the following form:
 
     $identifier$cost$salt$derived_key
 
+
 Install
 -------
 
 ```bash
 npm install mcf
 ```
+
 
 API
 ---
@@ -58,21 +61,22 @@ deserialize(mcf_field)
 serialize(identifier, cost, salt, derived_key)
 ```
 
+
 Usage
 -----
 
 Reading the format from the database:
 
 ```js
-var mcf = require('mcf');
+const mcf = require('mcf');
 
-var mcf_field = user.get('password');
+let mcf_field = user.get('password');
 try {
-    var obj = mcf.deserialize(mcf_field);
-    var identifier = obj.identifier;
-    var cost = obj.cost;
-    var salt = obj.salt;
-    var derived_key = obj.derived_key;
+    let obj = mcf.deserialize(mcf_field);
+    let identifier = obj.identifier;
+    let cost = obj.cost;
+    let salt = obj.salt;
+    let derived_key = obj.derived_key;
 } catch(err) {
     if (err instanceof mcf.McfError) {
         console.log("Format error in the database", err);
@@ -85,9 +89,22 @@ try {
 Creating the format to write in the database:
 
 ```js
-var mcf = require('mcf');
+const mcf = require('mcf');
 
-var mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key);
+let mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key);
+```
+
+Development
+-----------
+
+To run the tests:
+```bash
+npm test
+```
+
+To compute test coverage:
+```bash
+npm run test:coverage
 ```
 
 Contributions

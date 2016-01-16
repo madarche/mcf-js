@@ -1,7 +1,9 @@
-var expect = require('must');
+'use strict';
 
-var mcf = require('../');
-var McfError = mcf.McfError;
+const expect = require('must');
+
+const mcf = require('../');
+const McfError = mcf.McfError;
 
 describe("MCF", function() {
 
@@ -10,7 +12,7 @@ describe("MCF", function() {
     });
 
     it("serialize must produce a string", function() {
-        var res = mcf.serialize('pbkdf2', 10000, 'some_salt', 'some_derived_key');
+        let res = mcf.serialize('pbkdf2', 10000, 'some_salt', 'some_derived_key');
         res.must.be.a.string();
         res.must.equal('$pbkdf2$10000$some_salt$some_derived_key');
     });
@@ -38,7 +40,7 @@ describe("MCF", function() {
     });
 
     it("deserialize must return an object", function() {
-        var res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key');
+        let res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key');
         res.must.be.an.object();
         res.must.include('pbkdf2', 10000, 'some_salt', 'some_derived_key');
     });

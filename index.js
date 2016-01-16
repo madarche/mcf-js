@@ -1,38 +1,36 @@
-var createError = require('create-error');
+'use strict';
 
-var McfError = createError('McfError');
+const createError = require('create-error');
 
-exports.McfError = McfError;
-exports.serialize = serialize;
-exports.deserialize = deserialize;
+const McfError = createError('McfError');
 
 // http://pythonhosted.org/passlib/modular_crypt_format.html
 // salt must be a base64 encoded string
 // derived_key must be a base64 encoded string
 // '$'+identifier+'$'+cost+'$'+salt+'$'+derived_key
-var MCF_REGEXP = /\$(\w+)\$(\d+)\$([A-Za-z0-9_-]+)\$([A-Za-z0-9_-]+)/;
+const MCF_REGEXP = /\$(\w+)\$(\d+)\$([A-Za-z0-9_-]+)\$([A-Za-z0-9_-]+)/;
 
 /**
  * @param {string} mcf_field
  * @returns {Object}
  */
 function deserialize(mcf_field) {
-    var match = MCF_REGEXP.exec(mcf_field);
+    let match = MCF_REGEXP.exec(mcf_field);
     if (!match) {
         throw new McfError("Invalid MCF: " + mcf_field +
                            " while it must be: " + MCF_REGEXP);
     }
-    var identifier = match[1];
+    let identifier = match[1];
 
-    var cost = Number(match[2]);
+    let cost = Number(match[2]);
     if (cost === 0) {
         throw new McfError("Invalid MCF: " + cost +
                            " must be a strictly positive number");
     }
 
-    var salt = match[3];
+    let salt = match[3];
 
-    var derived_key = match[4];
+    let derived_key = match[4];
 
     return {
         identifier: identifier,
@@ -53,3 +51,7 @@ function serialize(identifier, cost, salt, derived_key) {
     return '$' + identifier + '$' + cost +
         '$' + salt + '$' + derived_key ;
 }
+
+exports.McfError = McfError;
+exports.serialize = serialize;
+exports.deserialize = deserialize;
