@@ -38,7 +38,9 @@
   "scripts": {
     "test": "mocha --check-leaks -R spec",
     "posttest": "npm run lint",
+    "posttest:coverage": "npm run lint",
     "test:coverage": "istanbul cover _mocha -- --check-leaks test/*.test.js",
+    "pretest:ci": "npm run lint",
     "test:ci": "istanbul cover _mocha -- --check-leaks test/*.test.js && cat test/coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "clean": "rm -rf test/coverage"
