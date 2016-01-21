@@ -8,7 +8,7 @@ const McfError = mcf.McfError;
 describe("MCF", function() {
 
     it("must export McfError", function() {
-        expect(McfError).to.exist()
+        expect(McfError).to.exist();
     });
 
     it("serialize must produce a string", function() {
