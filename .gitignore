@@ -1,5 +1,4 @@
-
 *~
 /node_modules
-/test/coverage
 npm-debug.log
+/test/coverage
