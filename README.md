@@ -2,26 +2,11 @@
 Modular Crypt Format
 ====================
 
-[![NPM Version][npm-image]][npm-url]
-[![Dependency Status][dependencies-image]][dependencies-url]
-[![devDependency Status][dev-dependencies-image]][dev-dependencies-url]
-[![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
-
-[npm-image]: https://img.shields.io/npm/v/mcf.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/mcf
-
-[travis-image]: https://img.shields.io/travis/madarche/mcf-js.svg?style=flat
-[travis-url]: https://travis-ci.org/madarche/mcf-js
-
-[dependencies-image]: https://david-dm.org/madarche/mcf-js.svg
-[dependencies-url]: https://david-dm.org/madarche/mcf-js
-
-[dev-dependencies-image]: https://david-dm.org/madarche/mcf-js/dev-status.svg
-[dev-dependencies-url]: https://david-dm.org/madarche/mcf-js#info=devDependencies
-
-[coveralls-image]: https://img.shields.io/coveralls/madarche/mcf-js/master.svg
-[coveralls-url]: https://coveralls.io/r/madarche/mcf-js?branch=master
+[![NPM version](http://img.shields.io/npm/v/mcf.svg)](https://www.npmjs.org/package/mcf)
+[![Dependency Status](https://david-dm.org/madarche/mcf-js.svg)](https://david-dm.org/madarche/mcf-js)
+[![devDependency Status](https://david-dm.org/madarche/mcf-js/dev-status.svg)](https://david-dm.org/madarche/mcf-js#info=devDependencies)
+[![Build Status](https://travis-ci.org/madarche/mcf-js.svg?branch=master)](https://travis-ci.org/madarche/mcf-js)
+[![Coverage Status](https://coveralls.io/repos/github/madarche/mcf-js/badge.svg?branch=master)](https://coveralls.io/github/madarche/mcf-js?branch=master)
 
 This modules reads (deserialize) and writes (serialize) password fields in
 databases following the Modular Crypt Format (MCF).
