@@ -16,7 +16,7 @@ rules:
   no-case-declarations: 2
   default-case: 2
   indent: [2, 4]
-  semi: 2
+  semi: [2, "never"]
   camelcase: 0
   no-underscore-dangle: 2
   no-trailing-spaces: 1
