@@ -43,6 +43,7 @@
     "test:ci": "istanbul cover _mocha -- --check-leaks test/*.test.js && cat test/coverage/lcov.info | coveralls",
     "posttest:ci": "npm run lint",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "clean": "rm -rf test/coverage"
   }
 }
