@@ -53,20 +53,20 @@ Usage
 Reading the format from the database:
 
 ```js
-const mcf = require('mcf');
+const mcf = require('mcf')
 
-let mcf_field = user.get('password');
+let mcf_field = user.get('password')
 try {
-    let obj = mcf.deserialize(mcf_field);
-    let identifier = obj.identifier;
-    let cost = obj.cost;
-    let salt = obj.salt;
-    let derived_key = obj.derived_key;
+    let obj = mcf.deserialize(mcf_field)
+    let identifier = obj.identifier
+    let cost = obj.cost
+    let salt = obj.salt
+    let derived_key = obj.derived_key
 } catch(err) {
     if (err instanceof mcf.McfError) {
-        console.log("Format error in the database", err);
+        console.log("Format error in the database", err)
     } else {
-        console.log("Unexpected fail");
+        console.log("Unexpected fail")
     }
 }
 ```
@@ -74,9 +74,9 @@ try {
 Creating the format to write in the database:
 
 ```js
-const mcf = require('mcf');
+const mcf = require('mcf')
 
-let mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key);
+let mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key)
 ```
 
 Development
