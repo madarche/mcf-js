@@ -5,19 +5,19 @@ const expect = require('must')
 const mcf = require('../')
 const McfError = mcf.McfError
 
-describe("MCF", function() {
+describe('MCF', () => {
 
-    it("must export McfError", function() {
+    it('must export McfError', () => {
         expect(McfError).to.exist()
     })
 
-    it("serialize must produce a string", function() {
+    it('serialize must produce a string', () => {
         let res = mcf.serialize('pbkdf2', 10000, 'some_salt', 'some_derived_key')
         res.must.be.a.string()
         res.must.equal('$pbkdf2$10000$some_salt$some_derived_key')
     })
 
-    it("deserialize must accept only a valid field", function() {
+    it('deserialize must accept only a valid field', () => {
         // TODO: Change to use this when js-must is fixed to accept this
         //mcf.deserialize('an_invalid_field').must.throw();
         try {
@@ -28,7 +28,7 @@ describe("MCF", function() {
         }
     })
 
-    it("deserialize must accept only a strictly positive (not zero) cost", function() {
+    it('deserialize must accept only a strictly positive (not zero) cost', () => {
         // TODO: Change to use this when js-must is fixed to accept this
         //mcf.deserialize('$pbkdf2$0$some_salt$some_derived_key').must.throw();
         try {
@@ -39,7 +39,7 @@ describe("MCF", function() {
         }
     })
 
-    it("deserialize must return an object", function() {
+    it('deserialize must return an object', () => {
         let res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key')
         res.must.be.an.object()
         res.must.include('pbkdf2', 10000, 'some_salt', 'some_derived_key')

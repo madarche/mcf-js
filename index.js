@@ -17,15 +17,15 @@ const MCF_REGEXP = /\$(\w+)\$(\d+)\$([A-Za-z0-9_-]+)\$([A-Za-z0-9_-]+)/
 function deserialize(mcf_field) {
     let match = MCF_REGEXP.exec(mcf_field)
     if (!match) {
-        throw new McfError("Invalid MCF: " + mcf_field +
-                           " while it must be: " + MCF_REGEXP)
+        throw new McfError('Invalid MCF: ' + mcf_field +
+                           ' while it must be: ' + MCF_REGEXP)
     }
     let identifier = match[1]
 
     let cost = Number(match[2])
     if (cost === 0) {
-        throw new McfError("Invalid MCF: " + cost +
-                           " must be a strictly positive number")
+        throw new McfError('Invalid MCF: ' + cost +
+                           ' must be a strictly positive number')
     }
 
     let salt = match[3]
