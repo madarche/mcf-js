@@ -8,7 +8,7 @@ const McfError = createError('McfError')
 // salt must be a base64 encoded string
 // derived_key must be a base64 encoded string
 // '$'+identifier+'$'+cost+'$'+salt+'$'+derived_key
-const MCF_REGEXP = /\$([A-Za-z0-9_-]+)\$(\d+)\$([A-Za-z0-9_-]+)\$([A-Za-z0-9_-]+)/
+const MCF_REGEXP = /\$([\w-]+)\$(\d+)\$([\w-]+)\$([\w-]+)/
 
 /**
  * @param {string} mcf_field
