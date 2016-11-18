@@ -40,9 +40,15 @@ describe('MCF', () => {
     })
 
     it('deserialize must return an object', () => {
-        let res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key')
+        let res
+
+        res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key')
         res.must.be.an.object()
         res.must.include('pbkdf2', 10000, 'some_salt', 'some_derived_key')
+
+        res = mcf.deserialize('$pbkdf2-sha256$10000$some_salt$some_derived_key')
+        res.must.be.an.object()
+        res.must.include('pbkdf2-sha256', 10000, 'some_salt', 'some_derived_key')
     })
 
 })
