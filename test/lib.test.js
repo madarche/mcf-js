@@ -7,30 +7,30 @@ const McfError = mcf.McfError
 
 describe('MCF', () => {
 
-    it('must export McfError', () => {
+    it('exports McfError', () => {
         expect(McfError).to.exist()
     })
 
-    it('serialize must produce a string', () => {
+    it('serialize produces a string', () => {
         let res = mcf.serialize('pbkdf2', 10000, 'some_salt', 'some_derived_key')
         res.must.be.a.string()
         res.must.equal('$pbkdf2$10000$some_salt$some_derived_key')
     })
 
-    it('deserialize must accept only a valid field', () => {
+    it('deserialize accepts only a valid field', () => {
         // TODO: Change to use this when js-must is fixed to accept this
-        //mcf.deserialize('an_invalid_field').must.throw();
+        //mcf.deserialize('an_invalid_field').must.throw(McfError);
         try {
-            mcf.deserialize('an_invalid_field').must.throw()
+            mcf.deserialize('an_invalid_field').must.throw(McfError)
         } catch (err) {
             expect(err).to.exist()
             err.must.be.a(McfError)
         }
     })
 
-    it('deserialize must accept only a strictly positive (not zero) cost', () => {
+    it('deserialize accepts only a strictly positive (not zero) cost', () => {
         // TODO: Change to use this when js-must is fixed to accept this
-        //mcf.deserialize('$pbkdf2$0$some_salt$some_derived_key').must.throw();
+        //mcf.deserialize('$pbkdf2$0$some_salt$some_derived_key').must.throw(McfError);
         try {
             mcf.deserialize('$pbkdf2$0$some_salt$some_derived_key').must.throw()
         } catch (err) {
@@ -39,7 +39,7 @@ describe('MCF', () => {
         }
     })
 
-    it('deserialize must return an object', () => {
+    it('deserialize returns an object', () => {
         let res
 
         res = mcf.deserialize('$pbkdf2$10000$some_salt$some_derived_key')

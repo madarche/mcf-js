@@ -29,12 +29,12 @@
   },
   "devDependencies": {
     "coveralls": "2.11.6",
-    "eslint": "3.8.0",
-    "eslint-config-usecases": "1.0.2",
+    "eslint": "3.10.2",
+    "eslint-config-usecases": "1.0.4",
     "istanbul": "0.4.2",
-    "mocha": "2.4.5",
+    "mocha": "3.1.2",
     "mocha-lcov-reporter": "1.0.0",
-    "must": "0.13.1"
+    "must": "0.13.2"
   },
   "scripts": {
     "test": "mocha --check-leaks -R spec",
