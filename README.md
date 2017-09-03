@@ -38,11 +38,11 @@ npm install mcf
 API
 ---
 
-```js
+```javascript
 deserialize(mcf_field)
 ```
 
-```js
+```javascript
 serialize(identifier, cost, salt, derived_key)
 ```
 
@@ -52,7 +52,7 @@ Usage
 
 Reading the format from the database:
 
-```js
+```javascript
 const mcf = require('mcf')
 
 let mcf_field = user.get('password')
@@ -73,7 +73,7 @@ try {
 
 Creating the format to write in the database:
 
-```js
+```javascript
 const mcf = require('mcf')
 
 let mcf_field = mcf.serialize('pbkdf2', cost, salt, derived_key)
