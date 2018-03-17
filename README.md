@@ -30,7 +30,7 @@ A password field in the Modular Crypt Format is of the following form:
 Install
 -------
 
-```bash
+```shell
 npm install mcf
 ```
 
@@ -83,12 +83,12 @@ Development
 -----------
 
 To run the tests:
-```bash
+```shell
 npm test
 ```
 
 To compute test coverage:
-```bash
+```shell
 npm run test:coverage
 ```
 
