@@ -16,7 +16,7 @@ in order to defend a database against attacks (dictionary attacks, pre-computed
 rainbow table attacks, etc.).
 
 The Modular Crypt Format is described in detail in
-http://pythonhosted.org/passlib/modular_crypt_format.html
+https://passlib.readthedocs.io/en/stable/modular_crypt_format.html
 
 
 Format
