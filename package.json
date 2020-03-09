@@ -3,7 +3,7 @@
   "version": "2.0.5",
   "description": "Modular Crypt Format",
   "engines": {
-    "node": ">=4"
+    "node": ">=10.15"
   },
   "main": "index.js",
   "repository": {
@@ -24,6 +24,17 @@
     "url": "https://github.com/madarche/mcf-js/issues"
   },
   "homepage": "https://github.com/madarche/mcf-js",
+  "scripts": {
+    "test": "mocha --check-leaks -R spec",
+    "posttest": "npm run lint",
+    "test:coverage": "istanbul cover _mocha -- --check-leaks test/*.test.js",
+    "posttest:coverage": "npm run lint",
+    "test:ci": "istanbul cover _mocha -- --check-leaks test/*.test.js && cat test/coverage/lcov.info | coveralls",
+    "posttest:ci": "npm run lint",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "clean": "rm -rf test/coverage"
+  },
   "dependencies": {
     "create-error": "0.3.1"
   },
@@ -35,16 +46,5 @@
     "mocha": "3.1.2",
     "mocha-lcov-reporter": "1.2.0",
     "must": "0.13.2"
-  },
-  "scripts": {
-    "test": "mocha --check-leaks -R spec",
-    "posttest": "npm run lint",
-    "test:coverage": "istanbul cover _mocha -- --check-leaks test/*.test.js",
-    "posttest:coverage": "npm run lint",
-    "test:ci": "istanbul cover _mocha -- --check-leaks test/*.test.js && cat test/coverage/lcov.info | coveralls",
-    "posttest:ci": "npm run lint",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "clean": "rm -rf test/coverage"
   }
 }
