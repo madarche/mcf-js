@@ -40,8 +40,8 @@
   },
   "devDependencies": {
     "coveralls": "2.11.15",
-    "eslint": "3.10.2",
-    "eslint-config-usecases": "1.0.4",
+    "eslint": "6.8.0",
+    "eslint-config-usecases": "https://github.com/madarche/eslint-config-usecases.git#v2.0.0",
     "istanbul": "0.4.5",
     "mocha": "3.1.2",
     "mocha-lcov-reporter": "1.2.0",

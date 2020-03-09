@@ -33,10 +33,10 @@ function deserialize(mcf_field) {
     let derived_key = match[4]
 
     return {
-        identifier: identifier,
-        cost: cost,
-        salt: salt,
-        derived_key: derived_key
+        identifier,
+        cost,
+        salt,
+        derived_key
     }
 }
 
